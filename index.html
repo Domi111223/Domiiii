@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Setalo Dominika | Illustrator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Setalo Dominika</a>
+        <nav class="desktop-nav">
+            <a href="about.html">About</a>
+            <a href="#">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <div class="mobile-overlay" id="mobileMenu">
+        <div class="close-btn" onclick="toggleMenu()">×</div>
+        <a href="about.html" onclick="toggleMenu()">About</a>
+        <a href="#" onclick="toggleMenu()">Services</a>
+        <a href="projects.html" onclick="toggleMenu()">Projects</a>
+        <a href="#" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <main class="container">
+        <section class="intro-text">
+            <p>Illusztrátorként a hagyományos, manuális technikák és a digitális eszközök ötvözésével hozok létre egyedi vizuális világokat. Alkotói folyamatomban fontos szerepet kap a kísérletezés: a kézzel készült textúrákat, vonalakat és formákat digitális utómunkával egészítem ki, így minden munkám egy sajátos, rétegzett vizuális nyelven szólal meg.</p>
+            <br>
+            <p>Elsősorban karakterillusztrációval foglalkozom. Olyan figurákat alkotok, amelyek erős vizuális identitással és egyedi személyiséggel rendelkeznek, miközben történeteket is hordoznak magukban. Inspirációmat a mindennapi megfigyelésekből, a popkultúrából és a klasszikus képzőművészetből merítem.</p>
+        </section>
+
+        <!-- Kép az 1-es design alapján -->
+        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop" class="main-img" alt="Dominika Illusztráció">
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.google.com/search?q=s%C3%A9t%C3%A1l%C3%B3+dominika">FACEBOOK</a>
+            <a href="https://www.google.com/search?q=s%C3%A9t%C3%A1l%C3%B3+dominika">INSTAGRAM</a>
+            <a href="mailto:dominika@gmail.com">GMAIL</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
