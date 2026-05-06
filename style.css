@@ -1,0 +1,147 @@
+/* Alapbeállítások */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Modern, tiszta betűtípus */
+    color: black;
+    background-color: #fdfdfd;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff0000; /* Piros hover */
+}
+
+/* Fejléc */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav.desktop-nav a {
+    margin-right: 30px;
+    font-weight: 500;
+}
+
+/* Szendvics menü gomb */
+.hamburger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: black;
+}
+
+/* Mobil Menü Overlay */
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95); /* Áttetsző fehér */
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease;
+    z-index: 1000;
+}
+
+.mobile-overlay.active {
+    right: 0;
+}
+
+.mobile-overlay a {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 5%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Tartalom konténer */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 5%;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+.main-img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%); /* Fekete-fehér stock fotók */
+    margin-bottom: 50px;
+}
+
+/* Projektek aloldal rács */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* About oldal - 3-as kép szerinti lista */
+.about-list {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    font-family: 'Courier New', Courier, monospace; /* Írógép stílus a listához */
+}
+
+/* Lábléc */
+footer {
+    background-color: #efefef;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+footer .footer-links a {
+    margin: 0 15px;
+    font-weight: bold;
+}
